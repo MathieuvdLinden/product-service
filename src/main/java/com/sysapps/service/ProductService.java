@@ -5,7 +5,6 @@ import com.sysapps.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,7 +12,7 @@ import java.util.stream.Collectors;
 public class ProductService {
 
     @Autowired
-    ProductRepository productRepository;
+    private ProductRepository productRepository;
 
     public Product getProductById(Long id) {
         return productRepository.findProductById(id);
